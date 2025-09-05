@@ -1,7 +1,7 @@
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
-<TITLE><font size="7">リンクをランダムに表示する方法</font></TITLE>
+<TITLE>リンクをランダムに表示する方法</TITLE>
 <SCRIPT TYPE="text/javascript">
 
 var rlink = new Array();//リンクの配列
@@ -24,7 +24,7 @@ document.getElementById("RandomLink").href = rlink[random];
 </HEAD>
 <BODY>
 
-<a id="RandomLink" href="" onclick="RandomLink()">あなたのラッキーページはこちら</a>
+<a id="RandomLink" href="" onclick="RandomLink()"><font size="7">あなたのラッキーページはこちら</font></a>
 <p>リンク先がランダムに変化(WEBサイト、画像、PDF)</p>
 
 </BODY>
