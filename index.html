@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<TITLE>リンクをランダムに表示する方法</TITLE>
+<SCRIPT TYPE="text/javascript">
+
+var rlink = new Array();//リンクの配列
+rlink[0] = "https://drive.google.com/file/d/1owaPxJab_HjCejN7H82I2hGYWXqrGqNx/view?usp=drive_link";
+rlink[1] = "https://drive.google.com/file/d/18-4odK38SWB1GiYC8hW5CGiKR9ghntqh/view?usp=drive_link";
+rlink[2] = "https://drive.google.com/file/d/1XADZbyrE-Y3NXk-LEP1a_thrrJTrb-Rx/view?usp=drive_link";
+rlink[3] = "https://drive.google.com/file/d/153OrriqeqNQAd475k6sjld3i71ht7k8E/view?usp=drive_link";
+
+
+function RandomLink()
+{
+var random = Math.floor( Math.random() * rlink.length );
+//randomは0～3のいずれかになる
+
+document.getElementById("RandomLink").href = rlink[random];
+//id="RandomLink"のhrefを書き換える
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<a id="RandomLink" href="" onclick="RandomLink()">あなたのラッキーページはこちら</a>
+<p>リンク先がランダムに変化(WEBサイト、画像、PDF)</p>
+
+</BODY>
+</HTML>
