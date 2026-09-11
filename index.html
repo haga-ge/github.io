@@ -1,79 +1,39 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>医療情報課「デジログ通信」 バックナンバー</title>
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<TITLE>リンクをランダムに表示する方法</TITLE>
+<SCRIPT TYPE="text/javascript">
 
-<style>
-body {
-    font-family: "Yu Gothic", "メイリオ", sans-serif;
-    background-color: #f5f7fa;
-    text-align: center;
-    margin: 0;
-    padding: 40px 20px;
+var rlink = new Array();//リンクの配列
+rlink[0] = "https://drive.google.com/file/d/1owaPxJab_HjCejN7H82I2hGYWXqrGqNx/view?usp=drive_link";
+rlink[1] = "https://drive.google.com/file/d/18-4odK38SWB1GiYC8hW5CGiKR9ghntqh/view?usp=drive_link";
+rlink[2] = "https://drive.google.com/file/d/1XADZbyrE-Y3NXk-LEP1a_thrrJTrb-Rx/view?usp=drive_link";
+rlink[3] = "https://drive.google.com/file/d/153OrriqeqNQAd475k6sjld3i71ht7k8E/view?usp=drive_link";
+
+
+function RandomLink()
+{
+var random = Math.floor( Math.random() * rlink.length );
+//randomは0～3のいずれかになる
+
+document.getElementById("RandomLink").href = rlink[random];
+//id="RandomLink"のhrefを書き換える
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 10px;
-}
+</SCRIPT>
+</HEAD>
+<BODY>
 
-p {
-    color: #666;
-    margin-bottom: 30px;
-}
+<center>
+<a id="RandomLink" href="" onclick="RandomLink()"><img src="images/tora.png" width = 95%></a>
+</center>
 
-.link-btn {
-    display: block;
-    width: 320px;
-    margin: 15px auto;
-    padding: 18px;
-    background-color: #0078D4;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-    transition: 0.3s;
-}
+<a id="RandomLink" href="" onclick="RandomLink()">あなたのラッキーページはこちら</a>
+<p>リンク先がランダムに変化(WEBサイト、画像、PDF)</p>
 
-.link-btn:hover {
-    background-color: #005A9E;
-    transform: translateY(-2px);
-}
-</style>
 
-</head>
 
-<body>
 
-<h1>医療情報課「デジログ通信」 バックナンバー</h1>
-<p>閲覧したい号をクリックしてください</p>
 
-<a class="link-btn"
-   href="https://drive.google.com/file/d/1oYKhhWndT98i3qumTqrUFX5gtnT5GZdE/view?usp=drive_link"
-   target="_blank">
-   VOL.4（2026年6月号）
-</a>
-
-<a class="link-btn"
-   href="https://drive.google.com/file/d/1sBZN7YtRdxrJKMZNltixdA_4f44HtQSx/view?usp=drive_link"
-   target="_blank">
-   VOL.3（2026年2月号）
-</a>
-
-<a class="link-btn"
-　 href="https://drive.google.com/file/d/1A6PHaSGwsj4dTbvfXAqQ2y9K_M7x6TsZ/view?usp=drive_link"
-   target="_blank">
-   VOL.2（2025年12月号）
-</a>
-
-<a class="link-btn"
-　 href="https://drive.google.com/file/d/1XeU-7Z-jwB2PcO4VupKMpIyC-34seWxG/view?usp=drive_link"
-   target="_blank">
-   VOL.1（2025年9月号）
-</a>
-
-</body>
-</html>
+</BODY>
+</HTML>
